@@ -33,14 +33,13 @@ var root = {
 
 // add middleware
 app.use(express.static(path.join(__dirname, "..", "build")));
-app.use(express.static("public"));
 app.use('/graphql', express_graphql({
   schema: schema,
   rootValue: root,
   graphiql: true
 }));
 
-// start express server on port 5000
+// start express server on port 3000
 app.listen(3000, () => {
   console.log("server started on port 3000");
 });
