@@ -1,24 +1,23 @@
 import ApolloClient from 'apollo-boost';
-import React, { useState } from 'react';
-import { TextBox } from './components';
-import { render } from 'react-dom';
+import { ApolloProvider } from '@apollo/react-hooks';
+import React from 'react';
+import TextBox from './Textbox';
+import styles from './App.module.css';
 
-class App extends React.Component {
 
-  render() {
-    const client = new ApolloClient({
-        uri: 'http://localhost:3000/graphql',
-    });
+const client = new ApolloClient({
+  uri: window.location.href+'graphql',
+});
 
+const App = () => {
     return (
       <ApolloProvider client={client}>
-      <div>
-        <h2>Twisker Assignment</h2>
+      <div className={styles.container}>
+          <h2>Twisker Assignment</h2>
       </div>
       <TextBox></TextBox>
       </ApolloProvider>
     )
-  }
 }
 
 export default App;
