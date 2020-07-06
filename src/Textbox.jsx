@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { gql } from "apollo-boost";
 import { useQuery, useMutation } from '@apollo/react-hooks';
 import styles from './App.module.css';
-import { Button, TextField, TextareaAutosize } from '@material-ui/core';
+import { Button, TextareaAutosize } from '@material-ui/core';
 
 const TextBox = () => {
     
