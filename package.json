@@ -20,7 +20,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start": "yarn run build && (cd server && yarn start)"
+    "start": "yarn run build && (cd server && yarn start)",
+    "heroku-postbuild": "npm install && (cd server && npm install)"
   },
   "eslintConfig": {
     "extends": "react-app"
